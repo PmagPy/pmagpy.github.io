@@ -43,7 +43,7 @@
 
 <ul>
 <li>Command line programs for all sorts of paleomagnetic data analysis and wrangling (contained within the programs folder of the main PmagPy repository).</li>
-<li>The pmagpy function module for paleomagnetic data analysis (pmagpy.pmag) and plotting (pmagpy.pmagplotlib) as well as a function module that further enables paleomagnetic data analysis within interactive computing environments such as the Jupyter notebook (pmagpy.ipmag). The functions within these modules are at the heart of the GUI and command line programs. With pmagpy in the python path (which is accomplished with the install scripts), these modules are can be imported (e.g. <code>import pmagpy.ipmag as ipmag</code>).</li>
+<li>The pmagpy function module for paleomagnetic data analysis (pmagpy.pmag) and plotting (pmagpy.pmagplotlib) as well as a function module that further enables paleomagnetic data analysis within interactive computing environments such as the Jupyter notebook (pmagpy.ipmag). The functions within these modules are at the heart of the GUI and command line programs. With pmagpy in the python path (which can be accomplished through pip installation), these modules can be imported (e.g. <code>import pmagpy.ipmag as ipmag</code>).</li>
 <li>Example data files that are used in the examples provided in the PmagPy cookbook <a href="http://earthref.org/PmagPy/cookbook">http://earthref.org/PmagPy/cookbook</a>
 </li>
 </ul>
@@ -54,22 +54,6 @@
 <a id="how-to-use-pmagpy" class="anchor" href="#how-to-use-pmagpy" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>How to use PmagPy</h3>
 
 <p>Full documentation for PmagPy installation and use is available in the <a href="http://earthref.org/PmagPy/cookbook">PmagPy cookbook</a>. You can see examples of PmagPy in action within these Jupyter notebooks: <a href="http://pmagpy.github.io/Example_PmagPy_Notebook.html">Example PmagPy Notebook</a> <a href="http://pmagpy.github.io/Additional_PmagPy_Examples.html">Additional PmagPy Examples</a>. The notebooks themselves can be found in this repository: <a href="https://github.com/PmagPy/2016_Tauxe-et-al_PmagPy_Notebooks/">https://github.com/PmagPy/2016_Tauxe-et-al_PmagPy_Notebooks/</a></p>
-
-<p>If you wish to use all of PmagPy (including functionality that extends well beyond what is available in the executable applications), here is how to get started:</p>
-
-<ul>
-<li>download a zip file of the latest release here: <a href="https://github.com/ltauxe/PmagPy/releases/latest">PmagPy latest release</a>. Click on "Source code (zip)" or "Source code (tar.gz)" to download. </li>
-<li>To install the software on a Mac or a PC, unzip the downloaded folder and double-click on the install script for your system. </li>
-<li>
-<p>Linux and advanced users on Mac and PCs can either clone the repository or download the latest release and then add the directory of the main repository folder (and the program directory for access to the command line programs) to their path and pythonpath. On a Mac, this can be done by adding these lines to the bash_profile: </p>
-
-<ul>
-<li><p><code>export PATH=~/PmagPy:./:$PATH</code></p></li>
-<li><p><code>export PATH=~/PmagPy/programs:./:$PATH</code></p></li>
-<li><p><code>export PYTHONPATH=$PYTHONPATH:~/PmagPy</code></p></li>
-</ul>
-</li>
-</ul>
 
 <h3>
 <a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Authors and Contributors</h3>
