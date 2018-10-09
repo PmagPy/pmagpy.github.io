@@ -19,10 +19,11 @@ If you already have some experience working with Python, you should be able to u
 If not, we have a full course in [Python for Earth Scientists](https://nbviewer.jupyter.org/github/ltauxe/Python-for-Earth-Science-Students/blob/master/Lecture_01.ipynb) available on Github.
 
 
-
 ### Running this notebook
 
-You are currently looking at static html, but you may want to run this notebook interactively. To do so, you'll need to first install Python and PmagPy (see [the Cookbook](https://earthref.org/PmagPy/cookbook/#getting_python) for install instructions).  You can then launch the notebook from your command line with the following commands.
+You are currently looking at static html, but you may want to run this notebook interactively.  You can check out a [Binder demo](https://mybinder.org/v2/gh/PmagPy/PmagPy/master?filepath=PmagPy.ipynb)  of this notebook (please be patient, it loads very slowly).
+
+You can also run this notebook locally. To do so, you'll need to first install Python and PmagPy (see [the Cookbook](https://earthref.org/PmagPy/cookbook/#getting_python) for install instructions).  You can then launch the notebook from your command line with the following commands.
 
 `cd Desktop`
 
@@ -63,9 +64,8 @@ For information on the science of paleomagnetism and rock magnetism, see [Essent
 
 ### Running this notebook
 
-You are currently looking at static html, but you may want to run this notebook interactively.  You can check out a [Binder demo](https://mybinder.org/v2/gh/PmagPy/PmagPy/master?filepath=PmagPy.ipynb)  of this notebook (please be patient, it loads very slowly).
+You are currently looking at static html, but you may want to run this notebook interactively. To do so, you'll need to first install Python and PmagPy (see [the Cookbook](https://earthref.org/PmagPy/cookbook/#getting_python) for install instructions).  You can then launch the notebook from your command line with the following commands.
 
-You can also run this notebook locally. To do so, you'll need to first install Python and PmagPy (see [the Cookbook](https://earthref.org/PmagPy/cookbook/#getting_python) for install instructions).  You can then launch the notebook from your command line with the following commands.
 
 `cd Desktop`
 
