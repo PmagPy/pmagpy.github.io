@@ -23,19 +23,7 @@ If not, we have a full course in [Python for Earth Scientists](https://nbviewer.
 
 You are currently looking at static html, but you may want to run this notebook interactively.  You can check out a [Binder demo](https://mybinder.org/v2/gh/PmagPy/PmagPy/master?filepath=PmagPy.ipynb)  of this notebook (please be patient, it loads very slowly).
 
-You can also run this notebook locally. To do so, you'll need to first install Python and PmagPy (see [the Cookbook](https://earthref.org/PmagPy/cookbook/#getting_python) for install instructions).  You can then launch the notebook from your command line with the following commands.
-
-`cd Desktop`
-
-`move_data_files.py`
-
-`cd PmagPy-data`
-
-`jupyter notebook`
-
-**jupyter notebook** will open a browser window, and you can then click on the notebook you want to run (like this one or the **PmagPy_cli** notebook).
-
-**Note**: You only have to do the **move_data_files.py** command once after initial installion and then once after each update.   You should make a copy of any notebook (see File menu) if you want to make any changes as each update will overwrite the standard notebooks.
+You can also run this notebook locally. To do so, you'll need to first install Python and PmagPy (see [the Cookbook](https://earthref.org/PmagPy/cookbook/#getting_python) for install instructions).  You can then launch the notebook from your command line (see [more details here](https://earthref.org/PmagPy/cookbook/#notebook_quickstart)).
 
 ### Getting started
 
@@ -64,19 +52,6 @@ For information on the science of paleomagnetism and rock magnetism, see [Essent
 
 ### Running this notebook
 
-You are currently looking at static html, but you may want to run this notebook interactively. To do so, you'll need to first install Python and PmagPy (see [the Cookbook](https://earthref.org/PmagPy/cookbook/#getting_python) for install instructions).  You can then launch the notebook from your command line with the following commands.
-
-
-`cd Desktop`
-
-`move_data_files.py`
-
-`cd PmagPy-data`
-
-`jupyter notebook`
-
-**jupyter notebook** will open a browser window, and you can then click on the notebook you want to run (like this one or the **PmagPy_cli** notebook).
-
-**Note**: You only have to do the **move_data_files.py** command once after initial installion and then once after each update.   You should make a copy of any notebook (see File menu) if you want to make any changes as each update will overwrite the standard notebooks.
+You are currently looking at static html, but you may want to run this notebook interactively. To do so, you'll need to first install Python and PmagPy (see [the Cookbook](https://earthref.org/PmagPy/cookbook/#getting_python) for install instructions).  You can then launch the notebook from your command line (see [more details here](https://earthref.org/PmagPy/cookbook/#notebook_quickstart)).
 
 ### Getting started
