@@ -4,7 +4,7 @@ by Lisa Tauxe, Lori Jonestrask, Nick Swanson-Hysell and Nick Jarboe
 
 ### What is **PmagPy**?
 
-**PmagPy** is a software package for analyzing paleomagnetic and rock magnetic data using Python. If you need to install Python and PmagPy locally, follow the [install instructions](https://earthref.org/PmagPy/cookbook/#getting_python). This notebook demonstrates the use of **PmagPy** functions from within a  Jupyter notebook. For examples of how to use PmagPy scripts on the command line, see the static version of [**PmagPy\_cli.ipynb**](http://pmagpy.github.io/PmagPy-cli.html) or if you are running jupyter notebook, you can open it locally (see instructions below).
+**PmagPy** is a software package for analyzing paleomagnetic and rock magnetic data using Python. If you need to install Python and PmagPy locally, follow the [install instructions](https://earthref.org/PmagPy/cookbook/#getting_python). This notebook demonstrates the use of **PmagPy** functions from within a  Jupyter notebook. For examples of how to use PmagPy scripts on the command line, see the static version of [**PmagPy\_cli.ipynb**](http://pmagpy.github.io/PmagPy-cli.html).
 
 
 ### What are paleomagnetism and rock magnetism?
