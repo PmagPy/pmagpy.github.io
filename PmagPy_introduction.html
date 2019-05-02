@@ -11776,9 +11776,9 @@ div#notebook {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Introduction-to-PmagPy">Introduction to PmagPy<a class="anchor-link" href="#Introduction-to-PmagPy">&#182;</a></h1><p>by Lisa Tauxe, Lori Jonestrask, Nick Swanson-Hysell and Nick Jarboe</p>
-<h2 id="What-is-PmagPy?">What is <strong>PmagPy</strong>?<a class="anchor-link" href="#What-is-PmagPy?">&#182;</a></h2><p><strong>PmagPy</strong> is a software package for analyzing paleomagnetic and rock magnetic data using Python. These notebooks demonstrate how to use <strong>PmagPy</strong> in a Jupyter notebook or Python script.  For examples of how to use PmagPy scripts on the command line, see the static version of <a href="http://pmagpy.github.io/PmagPy-cli.html"><strong>PmagPy_cli.ipynb</strong></a>, or you can open it locally with this link: <a href="PmagPy-cli.ipynb">PmagPy-cli.ipynb</a>.</p>
+<h2 id="What-is-PmagPy?">What is <strong>PmagPy</strong>?<a class="anchor-link" href="#What-is-PmagPy?">&#182;</a></h2><p><strong>PmagPy</strong> is a software package for analyzing paleomagnetic and rock magnetic data using Python. These notebooks demonstrate how to use <strong>PmagPy</strong> in a Jupyter notebook or Python script.  For examples of how to use PmagPy scripts on the command line, see the static version of <a href="http://pmagpy.github.io/PmagPy-cli.html"><strong>PmagPy_cli.ipynb</strong></a>.</p>
 <h2 id="What-are-paleomagnetism-and-rock-magnetism?">What are paleomagnetism and rock magnetism?<a class="anchor-link" href="#What-are-paleomagnetism-and-rock-magnetism?">&#182;</a></h2><p>For information on the science of paleomagnetism and rock magnetism, see textbook at: <a href="https://earthref.org/MagIC/books/Tauxe/Essentials/">https://earthref.org/MagIC/books/Tauxe/Essentials/</a></p>
-<h2 id="Using-Jupyter-notebooks-for-Earth-Science">Using Jupyter notebooks for Earth Science<a class="anchor-link" href="#Using-Jupyter-notebooks-for-Earth-Science">&#182;</a></h2><p>If you already have some experience working with Python, you should be able to navigate these notebooks.</p>
+<h2 id="Using-Jupyter-notebooks-for-Earth-Science">Using Jupyter notebooks for Earth Science<a class="anchor-link" href="#Using-Jupyter-notebooks-for-Earth-Science">&#182;</a></h2><p>If you already have some experience working with Python, you should be able to navigate these examples.</p>
 <p>If not, we have a full course in Python for Earth Scientists available on Github.  To check it out, see:</p>
 <p><a href="https://nbviewer.jupyter.org/github/ltauxe/Python-for-Earth-Science-Students/blob/master/Lecture_01.ipynb">https://nbviewer.jupyter.org/github/ltauxe/Python-for-Earth-Science-Students/blob/master/Lecture_01.ipynb</a></p>
 
@@ -11791,164 +11791,234 @@ div#notebook {
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Guide-to-PmagPy">Guide to PmagPy<a class="anchor-link" href="#Guide-to-PmagPy">&#182;</a></h2><p>The functionality of PmagPy is demonstrated within three notebooks in this repository:</p>
 <ul>
-<li><a href="PmagPy_calculations.ipynb">PmagPy_calculations.ipynb</a> This notebook demonstrates many of the PmagPy calculation functions such as those that rotate directions, return statistical parameters, and simulate data from specified distributions. </li>
-<li><a href="PmagPy_plots_analysis.ipynb">PmagPy_plots_analysis.ipynb</a> This notebook demonstrates PmagPy functions that can be used to visual data as well as those that conduct statistical tests that have associated visualizations.</li>
-<li><a href="PmagPy_MagIC.ipynb">PmagPy_MagIC.ipynb</a> This notebook demonstrates how PmagPy can be used to read and write data to and from the MagIC database format including conversion from many individual lab measurement file formats.</li>
+<li><a href="https://pmagpy.github.io/PmagPy_calculations.html">PmagPy_calculations.ipynb</a> This notebook demonstrates many of the PmagPy calculation functions such as those that rotate directions, return statistical parameters, and simulate data from specified distributions. </li>
+<li><a href="https://pmagpy.github.io/PmagPy_plots_analysis.html">PmagPy_plots_analysis.ipynb</a> This notebook demonstrates PmagPy functions that can be used to visual data as well as those that conduct statistical tests that have associated visualizations.</li>
+<li><a href="https://pmagpy.github.io/PmagPy_MagIC.html">PmagPy_MagIC.ipynb</a> This notebook demonstrates how PmagPy can be used to read and write data to and from the MagIC database format including conversion from many individual lab measurement file formats.</li>
 </ul>
-<h3 id="Functions-demonstrated-within-PmagPy_calculations.ipynb:">Functions demonstrated within <a href="PmagPy_calculations.ipynb">PmagPy_calculations.ipynb</a>:<a class="anchor-link" href="#Functions-demonstrated-within-PmagPy_calculations.ipynb:">&#182;</a></h3><ul>
+<h3 id="Functions-demonstrated-within-PmagPy_calculations.ipynb:">Functions demonstrated within <a href="https://pmagpy.github.io/PmagPy_calculations.html">PmagPy_calculations.ipynb</a>:<a class="anchor-link" href="#Functions-demonstrated-within-PmagPy_calculations.ipynb:">&#182;</a></h3><ul>
 <li>Functions in <strong>PmagPy_calculations.ipynb</strong>:<ul>
-<li><a href="#aarm_magic">aarm_magic</a> : calculate AARM tensors</li>
-<li><a href="#aarm_magic">atrm_magic</a> : calculate ATRM tensors</li>
-<li><a href="#angle">angle</a> : calculates the angle between two vectors</li>
-<li><a href="#apwp">apwp</a> : returns predicted paleolatitudes, directions and pole latitude/longitude from apparent polar wander paths of Besse and Courtillot (2002).</li>
-<li><a href="#b_vdm">b_vdm</a> : converts B (in microT) and (magnetic) latitude to V(A)DM (see <a href="#vdm_b">vdm_b</a>)</li>
-<li><a href="#bootams">bootams</a> : calculates bootstrap statistics for tensor data</li>
-<li><a href="#cart_dir">cart_dir</a> : converts cartesian coordinates (x,y,z) to declination, inclination, intensity (see <a href="#dir_cart">dir_cart</a>)</li>
-<li><a href="#di_eq">di_eq</a> : maps declination, inclinatitions to X,Y for plotting in equal area projections</li>
-<li><a href="#di_geo">di_geo</a> : rotates declination, inclination in specimen coordinates to geographic coordinates</li>
-<li><a href="#di_rot">di_rot</a> : rotates directions to a  coordinate system with D,I as center</li>
-<li><a href="#di_tilt">di_tilt</a> : rotates directions to stratigraphic coordinates</li>
-<li><a href="#di_vgp">di_vgp</a> : converts direction to Virtual Geomagnetic Pole (see <a href="#vgp_di">vgp_di</a>)</li>
-<li><a href="#dia_vgp">dia_vgp</a> : converts direction and $\alpha_{95}$ to Virtual Geomagnetic Pole and dp,dm</li>
-<li><a href="#dipole_pinc">dipole_pinc</a> : calculates inclination given latitude assuming geocentric axial dipole</li>
-<li><a href="#dipole_plat">dipole_plat</a> : calculates latitude given inclination assuming geocentric axial dipole</li>
-<li><a href="#dir_cart">dir_cart</a> : converts declination, inclination, intensity to cartesian coordinates (see <a href="#cart_dir">cart_dir</a>)</li>
-<li><a href="#eigs_s">eigs_s</a> : converts eigenparameters to equivalent 6 element tensor (see <a href="#s_eigs">s_eigs</a>)</li>
-<li><a href="#eq_di">eq_di</a> : takes X,Y from equal area projection (e.g., from digitized coordinates) and  converts to declination, inclination</li>
-<li><a href="#fcalc">fcalc</a> : returns the value from an F table, given the degrees of freedom.</li>
-<li><a href="#fisher">fisher</a> : generates sets of directions drawn from Fisher distributions with vertical true mean</li>
-<li><a href="#fishrot">fishrot</a> : generates sets of directions drawn from Fisher distributions with arbitrary true mean</li>
-<li><a href="#flip">flip</a> : flips a second mode (reverse directions) to their antipodes</li>
-<li><a href="#gaussian">gaussian</a> : generates data drawn from a normal distribution</li>
-<li><a href="#gobing">gobing</a> : calculates Bingham statistics from a set of directions</li>
-<li><a href="#gofish">gofish</a> : calculates Fisher statistics from a set of directions</li>
-<li><a href="#gokent">gokent</a> : calculates Kent statistics from a set of directions</li>
-<li><a href="#goprinc">goprinc</a> : calculates principal directions statistics</li>
-<li><a href="#igrf">igrf</a> : calculates geomagnetic field vectors for location, age given a field model (e.g., IGRF)</li>
-<li><a href="#incfish">incfish</a> : estimates the true mean inclination from inclination only data</li>
-<li><a href="#pca">pca</a> : calculates the best-fit line or plane for demagnetization data and associated statistics</li>
-<li><a href="#pt_rot">pt_rot</a> : rotates point given finite rotation pole</li>
-<li><a href="#scalc">scalc</a> : calculates  VGP scatter</li>
-<li><a href="#s_eigs">s_eigs</a> : takes a 6 element tensor and calculates eigen parameters (see <a href="#eigs_s">eigs_s</a>)</li>
-<li><a href="#s_geo">s_geo</a> : rotates 6 element tensors to geographic coordinates</li>
-<li><a href="#s_hext">s_hext</a> : calculates Hext statistics from 6 element tensors</li>
-<li><a href="#s_tilt">s_tilt</a> : rotates 6 element tensors to stratigraphic coordinates</li>
-<li><a href="#separate_directions">separate_directions</a> : separates a set of directions into two modes (normal and reverse)</li>
-<li><a href="#squish">squish</a>: flattens inclination data given flattening factor (see <a href="#unsquish">unsquish</a>)</li>
-<li><a href="#sundec">sundec</a> : calulates direction to sun for location, date, time and sun azimuth</li>
-<li><a href="#tk03">tk03</a> : generates sets of directions consistent with the TK03 field model</li>
-<li><a href="#uniform">uniform</a> : generates sets of uniformly distributed directions</li>
-<li><a href="#unsquish">unsquish</a> : unsquishes flattened inclinations, given flattening factor (see <a href="#squish">squish</a>)</li>
-<li><a href="#vector_mean">vector_mean</a> : calculates vector mean for sets of vectors (declination, inclination, intensity)</li>
-<li><a href="#vdm_b">vdm_b</a> : calculates intensity at given location from specified virtual dipole moment (see <a href="#b_vdm">b_vdm</a>)</li>
-<li><a href="#vgp_di">vgp_di</a> : calculates direction at given location from virtual geomagnetic pole (see <a href="#di_vgp">di_vgp</a>)</li>
-<li><a href="#watsons_f">watsons_f</a> : calculates Watson's F statistic for testing for common mean</li>
+<li><a href="https://pmagpy.github.io/PmagPy_calculations.html#aarm_magic">aarm_magic</a> : calculate AARM tensors</li>
+<li><a href="https://pmagpy.github.io/PmagPy_calculations.html#aarm_magic">atrm_magic</a> : calculate ATRM tensors</li>
+<li><a href="https://pmagpy.github.io/PmagPy_calculations.html#angle">angle</a> : calculates the angle between two vectors</li>
+<li><a href="https://pmagpy.github.io/PmagPy_calculations.html#apwp">apwp</a> : returns predicted paleolatitudes, directions and pole latitude/longitude from apparent polar wander paths of Besse and Courtillot (2002).</li>
+<li><a href="https://pmagpy.github.io/PmagPy_calculations.html#b_vdm">b_vdm</a> : converts B (in microT) and (magnetic) latitude to V(A)DM (see <a href="https://pmagpy.github.io/PmagPy_calculations.html#vdm_b">vdm_b</a>)</li>
+<li><a href="https://pmagpy.github.io/PmagPy_calculations.html#bootams">bootams</a> : calculates bootstrap statistics for tensor data</li>
+<li><a href="https://pmagpy.github.io/PmagPy_calculations.html#cart_dir">cart_dir</a> : converts cartesian coordinates (x,y,z) to declination, inclination, intensity (see <a href="https://pmagpy.github.io/PmagPy_calculations.html#dir_cart">dir_cart</a>)</li>
+<li><a href="https://pmagpy.github.io/PmagPy_calculations.html#di_eq">di_eq</a> : maps declination, inclinatitions to X,Y for plotting in equal area projections</li>
+<li><a href="https://pmagpy.github.io/PmagPy_calculations.html#di_geo">di_geo</a> : rotates declination, inclination in specimen coordinates to geographic coordinates</li>
+<li><a href="https://pmagpy.github.io/PmagPy_calculations.html#di_rot">di_rot</a> : rotates directions to a  coordinate system with D,I as center</li>
+<li><a href="https://pmagpy.github.io/PmagPy_calculations.html#di_tilt">di_tilt</a> : rotates directions to stratigraphic coordinates</li>
+<li><a href="https://pmagpy.github.io/PmagPy_calculations.html#di_vgp">di_vgp</a> : converts direction to Virtual Geomagnetic Pole (see <a href="https://pmagpy.github.io/PmagPy_calculations.html#vgp_di">vgp_di</a>)</li>
+<li><a href="https://pmagpy.github.io/PmagPy_calculations.html#dia_vgp">dia_vgp</a> : converts direction and $\alpha_{95}$ to Virtual Geomagnetic Pole and dp,dm</li>
+<li><a href="https://pmagpy.github.io/PmagPy_calculations.html#dipole_pinc">dipole_pinc</a> : calculates inclination given latitude assuming geocentric axial dipole</li>
+<li><a href="https://pmagpy.github.io/PmagPy_calculations.html#dipole_plat">dipole_plat</a> : calculates latitude given inclination assuming geocentric axial dipole</li>
+<li><a href="https://pmagpy.github.io/PmagPy_calculations.html#dir_cart">dir_cart</a> : converts declination, inclination, intensity to cartesian coordinates (see <a href="https://pmagpy.github.io/PmagPy_calculations.html#cart_dir">cart_dir</a>)</li>
+<li><a href="https://pmagpy.github.io/PmagPy_calculations.html#eigs_s">eigs_s</a> : converts eigenparameters to equivalent 6 element tensor (see <a href="https://pmagpy.github.io/PmagPy_calculations.html#s_eigs">s_eigs</a>)</li>
+<li><a href="https://pmagpy.github.io/PmagPy_calculations.html#eq_di">eq_di</a> : takes X,Y from equal area projection (e.g., from digitized coordinates) and  converts to declination, inclination</li>
+<li><a href="https://pmagpy.github.io/PmagPy_calculations.html#fcalc">fcalc</a> : returns the value from an F table, given the degrees of freedom.</li>
+<li><a href="https://pmagpy.github.io/PmagPy_calculations.html#fisher">fisher</a> : generates sets of directions drawn from Fisher distributions with vertical true mean</li>
+<li><a href="https://pmagpy.github.io/PmagPy_calculations.html#fishrot">fishrot</a> : generates sets of directions drawn from Fisher distributions with arbitrary true mean</li>
+<li><a href="https://pmagpy.github.io/PmagPy_calculations.html#flip">flip</a> : flips a second mode (reverse directions) to their antipodes</li>
+<li><a href="https://pmagpy.github.io/PmagPy_calculations.html#gaussian">gaussian</a> : generates data drawn from a normal distribution</li>
+<li><a href="https://pmagpy.github.io/PmagPy_calculations.html#gobing">gobing</a> : calculates Bingham statistics from a set of directions</li>
+<li><a href="https://pmagpy.github.io/PmagPy_calculations.html#gofish">gofish</a> : calculates Fisher statistics from a set of directions</li>
+<li><a href="https://pmagpy.github.io/PmagPy_calculations.html#gokent">gokent</a> : calculates Kent statistics from a set of directions</li>
+<li><a href="https://pmagpy.github.io/PmagPy_calculations.html#goprinc">goprinc</a> : calculates principal directions statistics</li>
+<li><a href="https://pmagpy.github.io/PmagPy_calculations.html#igrf">igrf</a> : calculates geomagnetic field vectors for location, age given a field model (e.g., IGRF)</li>
+<li><a href="https://pmagpy.github.io/PmagPy_calculations.html#incfish">incfish</a> : estimates the true mean inclination from inclination only data</li>
+<li><a href="https://pmagpy.github.io/PmagPy_calculations.html#pca">pca</a> : calculates the best-fit line or plane for demagnetization data and associated statistics</li>
+<li><a href="https://pmagpy.github.io/PmagPy_calculations.html#pt_rot">pt_rot</a> : rotates point given finite rotation pole</li>
+<li><a href="https://pmagpy.github.io/PmagPy_calculations.html#scalc">scalc</a> : calculates  VGP scatter</li>
+<li><a href="https://pmagpy.github.io/PmagPy_calculations.html#s_eigs">s_eigs</a> : takes a 6 element tensor and calculates eigen parameters (see <a href="https://pmagpy.github.io/PmagPy_calculations.html#eigs_s">eigs_s</a>)</li>
+<li><a href="https://pmagpy.github.io/PmagPy_calculations.html#s_geo">s_geo</a> : rotates 6 element tensors to geographic coordinates</li>
+<li><a href="https://pmagpy.github.io/PmagPy_calculations.html#s_hext">s_hext</a> : calculates Hext statistics from 6 element tensors</li>
+<li><a href="https://pmagpy.github.io/PmagPy_calculations.html#s_tilt">s_tilt</a> : rotates 6 element tensors to stratigraphic coordinates</li>
+<li><a href="https://pmagpy.github.io/PmagPy_calculations.html#separate_directions">separate_directions</a> : separates a set of directions into two modes (normal and reverse)</li>
+<li><a href="https://pmagpy.github.io/PmagPy_calculations.html#squish">squish</a>: flattens inclination data given flattening factor (see <a href="https://pmagpy.github.io/PmagPy_calculations.html#unsquish">unsquish</a>)</li>
+<li><a href="https://pmagpy.github.io/PmagPy_calculations.html#sundec">sundec</a> : calulates direction to sun for location, date, time and sun azimuth</li>
+<li><a href="https://pmagpy.github.io/PmagPy_calculations.html#tk03">tk03</a> : generates sets of directions consistent with the TK03 field model</li>
+<li><a href="https://pmagpy.github.io/PmagPy_calculations.html#uniform">uniform</a> : generates sets of uniformly distributed directions</li>
+<li><a href="https://pmagpy.github.io/PmagPy_calculations.html#unsquish">unsquish</a> : unsquishes flattened inclinations, given flattening factor (see <a href="https://pmagpy.github.io/PmagPy_calculations.html#squish">squish</a>)</li>
+<li><a href="https://pmagpy.github.io/PmagPy_calculations.html#vector_mean">vector_mean</a> : calculates vector mean for sets of vectors (declination, inclination, intensity)</li>
+<li><a href="https://pmagpy.github.io/PmagPy_calculations.html#vdm_b">vdm_b</a> : calculates intensity at given location from specified virtual dipole moment (see <a href="https://pmagpy.github.io/PmagPy_calculations.html#b_vdm">b_vdm</a>)</li>
+<li><a href="https://pmagpy.github.io/PmagPy_calculations.html#vgp_di">vgp_di</a> : calculates direction at given location from virtual geomagnetic pole (see <a href="https://pmagpy.github.io/PmagPy_calculations.html#di_vgp">di_vgp</a>)</li>
+<li><a href="https://pmagpy.github.io/PmagPy_calculations.html#watsons_f">watsons_f</a> : calculates Watson's F statistic for testing for common mean</li>
 </ul>
 </li>
 </ul>
-<h3 id="Functions-demonstrated-within-PmagPy_plots_tests.ipynb:">Functions demonstrated within <a href="PmagPy_plots_tests.ipynb">PmagPy_plots_tests.ipynb</a>:<a class="anchor-link" href="#Functions-demonstrated-within-PmagPy_plots_tests.ipynb:">&#182;</a></h3><ul>
-<li><p>Functions in <strong>PmagPy_plots_tests.ipynb</strong></p>
+<h3 id="Functions-demonstrated-within-PmagPy_plots_analysis.ipynb:">Functions demonstrated within <a href="https://pmagpy.github.io/PmagPy_plots_analysis.html">PmagPy_plots_analysis.ipynb</a>:<a class="anchor-link" href="#Functions-demonstrated-within-PmagPy_plots_analysis.ipynb:">&#182;</a></h3><ul>
+<li><p>Functions in <strong>PmagPy_plots_analysis.ipynb</strong></p>
 <ul>
-<li><a href="#ani_depthplot">ani_depthplot</a> : plots anisotropy data against depth in stratigraphic section (Xmas tree plots)</li>
-<li><a href="#aniso_magic">aniso_magic</a> : makes plots of anisotropy data and bootstrapped confidences </li>
-<li><a href="#biplot_magic">biplot_magic</a> : plots different columns against each other in MagIC formatted data files</li>
-<li><a href="#chi_magic">chi_magic</a> : plots magnetic susceptibility data in MagIC format as function of field, frequency or temperature</li>
-<li><a href="#common_mean">common_mean</a> : graphical approach to testing two sets of directions for common mean using bootstrap</li>
-<li><a href="#core_depthplot">core_depthplot</a> : plots MagIC formatted data </li>
-<li><a href="#curie">curie</a> : makes plots of Curie Temperature data and provides estimates for Tc</li>
-<li><a href="#dayplot_magic">dayplot_magic</a> : makes Day et al. (1977) and other plots with hysteresis statistics</li>
-<li><a href="#dmag_magic">dmag_magic</a> : plots remanence against demagnetization step for MagIC formatted files</li>
-<li><a href="#eqarea">eqarea</a> and <a href="#eqarea_magic">eqarea_magic</a> : makes equal area projections for directions</li>
-<li><a href="#eqarea_ell">eqarea_ell</a> : makes equal area projections for directions with specified confidence ellipses</li>
-<li><a href="#find_ei">find_ei</a> : finds the inclination unflattening factor that unsquishes directions to match TK03 distribution</li>
-<li><a href="#fishqq">fishqq</a>: makes a Quantile-Quantile plot for directions against uniform and exponential distributions</li>
-<li><a href="#foldtest">foldtest</a> &amp; <a href="#foldtest_magic">foldtest_magic</a> : finds  tilt correction that maximizes concentration of directions, with bootstrap confidence bounds.          </li>
-<li><a href="#forc_diagram">forc_diagram</a>: plots FORC diagrams for both conventional and irregular FORCs</li>
-<li><a href="#hysteresis_magic">hysteresis_magic</a> : makes plots of hysteresis data (not FORCs). </li>
-<li><a href="#irm_unmix">irm_unmix</a> : analyzes IRM acquisition data in terms of coercivity distributions</li>
-<li><a href="#irm_magic">irmaq_magic</a> : plots IRM acquistion data</li>
-<li><a href="#lnp_magic">lnp_magic</a> : plots lines and planes for site level data and calculates best fit mean and alpha_95</li>
-<li><a href="#lowes">lowes</a> : makes a plot of the Lowe's spectrum for a geomagnetic field model</li>
-<li><a href="#lowrie">lowrie</a> and <a href="#lowrie_magic">lowrie_magic</a> : makes plots of Lowrie's (1990) 3D-IRM demagnetization experiments</li>
-<li><a href="#plot_cdf">plot_cdf</a> and <a href="#plot_2cdfs">plot_2cdfs</a> : makes a cumulative distribution plot of data</li>
-<li><a href="#plotdi_a">plotdi_a</a> : makes equal are plots of directions and their $\alpha_{95}$s</li>
-<li><a href="#plot_geomagia">plot_geomagia</a> : makes plots from files downloaded from the  geomagia website</li>
-<li><a href="#plot_magic_keys">plot_magic_keys</a> : plots data from MagIC formatted data files</li>
-<li><a href="#plot_ts">plot_ts</a> : makes a plot of the desired Geomagnetic Reversal time scale</li>
-<li><a href="#qqplot">qqplot</a> : makes a Quantile-Quantile plot for data against a normal distribution</li>
-<li><a href="#qqunf">qqunf</a> : makes a Quantile-Quantile plot for data against a uniform distribution</li>
-<li><a href="#quick_hyst">quick_hyst</a> : makes hysteresis plots</li>
-<li><a href="#revtest">revtest</a> &amp; <a href="#revtest_magic">revtest_magic</a> : performs a bootstrap reversals test</li>
-<li><a href="#thellier_magic">thellier_magic</a> : makes plots of thellier-thellier data. </li>
-<li><a href="#watsons_v">watsons_v</a> : makes a graph for Watson's V test for common mean</li>
-<li><a href="#zeq">zeq</a> and <a href="#zeq_magic">zeq_magic</a> : makes quicky zijderveld plots for measurement data</li>
+<li><a href="https://pmagpy.github.io/PmagPy_plots_analysis.html#ani_depthplot">ani_depthplot</a> : plots anisotropy data against depth in stratigraphic section (Xmas tree plots)</li>
+<li><a href="https://pmagpy.github.io/PmagPy_plots_analysis.html#aniso_magic">aniso_magic</a> : makes plots of anisotropy data and bootstrapped confidences </li>
+<li><a href="https://pmagpy.github.io/PmagPy_plots_analysis.html#biplot_magic">biplot_magic</a> : plots different columns against each other in MagIC formatted data files</li>
+<li><a href="https://pmagpy.github.io/PmagPy_plots_analysis.html#chi_magic">chi_magic</a> : plots magnetic susceptibility data in MagIC format as function of field, frequency or temperature</li>
+<li><a href="https://pmagpy.github.io/PmagPy_plots_analysis.html#common_mean">common_mean</a> : graphical approach to testing two sets of directions for common mean using bootstrap</li>
+<li><a href="https://pmagpy.github.io/PmagPy_plots_analysis.html#core_depthplot">core_depthplot</a> : plots MagIC formatted data </li>
+<li><a href="https://pmagpy.github.io/PmagPy_plots_analysis.html#curie">curie</a> : makes plots of Curie Temperature data and provides estimates for Tc</li>
+<li><a href="https://pmagpy.github.io/PmagPy_plots_analysis.html#dayplot_magic">dayplot_magic</a> : makes Day et al. (1977) and other plots with hysteresis statistics</li>
+<li><a href="https://pmagpy.github.io/PmagPy_plots_analysis.html#dmag_magic">dmag_magic</a> : plots remanence against demagnetization step for MagIC formatted files</li>
+<li><a href="https://pmagpy.github.io/PmagPy_plots_analysis.html#eqarea">eqarea</a> and <a href="https://pmagpy.github.io/PmagPy_plots_analysis.html#eqarea_magic">eqarea_magic</a> : makes equal area projections for directions</li>
+<li><a href="https://pmagpy.github.io/PmagPy_plots_analysis.html#eqarea_ell">eqarea_ell</a> : makes equal area projections for directions with specified confidence ellipses</li>
+<li><a href="https://pmagpy.github.io/PmagPy_plots_analysis.html#find_ei">find_ei</a> : finds the inclination unflattening factor that unsquishes directions to match TK03 distribution</li>
+<li><a href="https://pmagpy.github.io/PmagPy_plots_analysis.html#fishqq">fishqq</a>: makes a Quantile-Quantile plot for directions against uniform and exponential distributions</li>
+<li><a href="https://pmagpy.github.io/PmagPy_plots_analysis.html#foldtest">foldtest</a> &amp; <a href="https://pmagpy.github.io/PmagPy_plots_analysis.html#foldtest_magic">foldtest_magic</a> : finds  tilt correction that maximizes concentration of directions, with bootstrap confidence bounds.          </li>
+<li><a href="https://pmagpy.github.io/PmagPy_plots_analysis.html#forc_diagram">forc_diagram</a>: plots FORC diagrams for both conventional and irregular FORCs</li>
+<li><a href="https://pmagpy.github.io/PmagPy_plots_analysis.html#hysteresis_magic">hysteresis_magic</a> : makes plots of hysteresis data (not FORCs). </li>
+<li><a href="https://pmagpy.github.io/PmagPy_plots_analysis.html#irm_unmix">irm_unmix</a> : analyzes IRM acquisition data in terms of coercivity distributions</li>
+<li><a href="https://pmagpy.github.io/PmagPy_plots_analysis.html#irm_magic">irmaq_magic</a> : plots IRM acquistion data</li>
+<li><a href="https://pmagpy.github.io/PmagPy_plots_analysis.html#lnp_magic">lnp_magic</a> : plots lines and planes for site level data and calculates best fit mean and alpha_95</li>
+<li><a href="https://pmagpy.github.io/PmagPy_plots_analysis.html#lowes">lowes</a> : makes a plot of the Lowe's spectrum for a geomagnetic field model</li>
+<li><a href="https://pmagpy.github.io/PmagPy_plots_analysis.html#lowrie">lowrie</a> and <a href="https://pmagpy.github.io/PmagPy_plots_analysis.html#lowrie">lowrie_magic</a> : makes plots of Lowrie's (1990) 3D-IRM demagnetization experiments</li>
+<li><a href="https://pmagpy.github.io/PmagPy_plots_analysis.html#plot_cdf">plot_cdf</a> and <a href="https://pmagpy.github.io/PmagPy_plots_analysis.html#plot_2cdfs">plot_2cdfs</a> : makes a cumulative distribution plot of data</li>
+<li><a href="https://pmagpy.github.io/PmagPy_plots_analysis.html#plotdi_a">plotdi_a</a> : makes equal are plots of directions and their $\alpha_{95}$s</li>
+<li><a href="https://pmagpy.github.io/PmagPy_plots_analysis.html#plot_geomagia">plot_geomagia</a> : makes plots from files downloaded from the  geomagia website</li>
+<li><a href="https://pmagpy.github.io/PmagPy_plots_analysis.html#plot_magic_keys">plot_magic_keys</a> : plots data from MagIC formatted data files</li>
+<li><a href="https://pmagpy.github.io/PmagPy_plots_analysis.html#plot_ts">plot_ts</a> : makes a plot of the desired Geomagnetic Reversal time scale</li>
+<li><a href="https://pmagpy.github.io/PmagPy_plots_analysis.html#qqplot">qqplot</a> : makes a Quantile-Quantile plot for data against a normal distribution</li>
+<li><a href="https://pmagpy.github.io/PmagPy_plots_analysis.html#qqunf">qqunf</a> : makes a Quantile-Quantile plot for data against a uniform distribution</li>
+<li><a href="https://pmagpy.github.io/PmagPy_plots_analysis.html#quick_hyst">quick_hyst</a> : makes hysteresis plots</li>
+<li><a href="https://pmagpy.github.io/PmagPy_plots_analysis.html#revtest">revtest</a> &amp; <a href="https://pmagpy.github.io/PmagPy_plots_analysis.html#revtest_magic">revtest_magic</a> : performs a bootstrap reversals test</li>
+<li><a href="https://pmagpy.github.io/PmagPy_plots_analysis.html#thellier_magic">thellier_magic</a> : makes plots of thellier-thellier data. </li>
+<li><a href="https://pmagpy.github.io/PmagPy_plots_analysis.html#watsons_v">watsons_v</a> : makes a graph for Watson's V test for common mean</li>
+<li><a href="https://pmagpy.github.io/PmagPy_plots_analysis.html#zeq">zeq</a> and <a href="https://pmagpy.github.io/PmagPy_plots_analysis.html#zeq_magic">zeq_magic</a> : makes quicky zijderveld plots for measurement data</li>
 </ul>
 </li>
 <li><p>Maps:</p>
 <ul>
-<li><a href="#cont_rot">cont_rot</a> : makes plots of continents after rotation to specified coordinate system</li>
-<li><a href="#plot_mag_map">plot_mag_map</a> : makes a color contour plot of geomagnetic field models</li>
-<li><a href="#plot_map_pts">plot_map_pts</a> : plots points on maps</li>
-<li><a href="#polemap_magic">polemap_magic</a> : reads in MagIC formatted file with paleomagnetic poles and plots them</li>
-<li><a href="#vgpmap_magic">vgpmap_magic</a> : reads in MagIC formatted file with virtual geomagnetic poles and plots them</li>
+<li><a href="https://pmagpy.github.io/PmagPy_plots_analysis.html#cont_rot">cont_rot</a> : makes plots of continents after rotation to specified coordinate system</li>
+<li><a href="https://pmagpy.github.io/PmagPy_plots_analysis.html#plot_mag_map">plot_mag_map</a> : makes a color contour plot of geomagnetic field models</li>
+<li><a href="https://pmagpy.github.io/PmagPy_plots_analysis.html#plot_map_pts">plot_map_pts</a> : plots points on maps</li>
+<li><a href="https://pmagpy.github.io/PmagPy_plots_analysis.html#polemap_magic">polemap_magic</a> : reads in MagIC formatted file with paleomagnetic poles and plots them</li>
+<li><a href="https://pmagpy.github.io/PmagPy_plots_analysis.html#vgpmap_magic">vgpmap_magic</a> : reads in MagIC formatted file with virtual geomagnetic poles and plots them</li>
 </ul>
 </li>
 </ul>
-<h3 id="Functions-demonstrated-within-PmagPy_MagIC.ipynb:">Functions demonstrated within <a href="PmagPy_MagIC.ipynb">PmagPy_MagIC.ipynb</a>:<a class="anchor-link" href="#Functions-demonstrated-within-PmagPy_MagIC.ipynb:">&#182;</a></h3><ul>
+<h3 id="Functions-demonstrated-within-PmagPy_MagIC.ipynb:">Functions demonstrated within <a href="https://pmagpy.github.io/PmagPy_MagIC.html">PmagPy_MagIC.ipynb</a>:<a class="anchor-link" href="#Functions-demonstrated-within-PmagPy_MagIC.ipynb:">&#182;</a></h3><ul>
 <li><p>Functions in <strong>PmagPy_MagIC.ipynb</strong></p>
 <ul>
-<li><a href="#magic_read">reading MagIC files</a> : reading in MagIC formatted files</li>
-<li><a href="#magic_write">writing MagIC files</a> : outputing MagIC formatted files</li>
-<li><a href="#combine_magic">combine_magic</a> : combines two MagIC formatted files of same type</li>
-<li><a href="#convert_ages">convert_ages</a> : convert ages in downloaded MagIC file to Ma</li>
-<li><a href="#grab_magic_key">grab_magic_key</a> : prints out a single column from a MagIC format file</li>
-<li><a href="#magic_select">magic_select</a> : selects data from MagIC format file given conditions (e.g., method_codes contain string)</li>
-<li><a href="#sites_extract">sites_extract</a> : makes excel or latex files from sites.txt for publications</li>
-<li><a href="#criteria_extract">criteria_extract</a> : makes excel or latex files from criteria.txt for publications</li>
-<li><p><a href="#specimens_extract">specimens_extract</a> : makes excel or latex files from specimens.txt for publications</p>
+<li><a href="https://pmagpy.github.io/PmagPy_MagIC.html#magic_read">reading MagIC files</a> : reading in MagIC formatted files</li>
+<li><a href="https://pmagpy.github.io/PmagPy_MagIC.html#magic_write">writing MagIC files</a> : outputing MagIC formatted files</li>
+<li><a href="https://pmagpy.github.io/PmagPy_MagIC.html#combine_magic">combine_magic</a> : combines two MagIC formatted files of same type</li>
+<li><a href="https://pmagpy.github.io/PmagPy_MagIC.html#convert_ages">convert_ages</a> : convert ages in downloaded MagIC file to Ma</li>
+<li><a href="https://pmagpy.github.io/PmagPy_MagIC.html#grab_magic_key">grab_magic_key</a> : prints out a single column from a MagIC format file</li>
+<li><a href="https://pmagpy.github.io/PmagPy_MagIC.html#magic_select">magic_select</a> : selects data from MagIC format file given conditions (e.g., method_codes contain string)</li>
+<li><a href="https://pmagpy.github.io/PmagPy_MagIC.html#sites_extract">sites_extract</a> : makes excel or latex files from sites.txt for publications</li>
+<li><a href="https://pmagpy.github.io/PmagPy_MagIC.html#criteria_extract">criteria_extract</a> : makes excel or latex files from criteria.txt for publications</li>
+<li><p><a href="https://pmagpy.github.io/PmagPy_MagIC.html#specimens_extract">specimens_extract</a> : makes excel or latex files from specimens.txt for publications</p>
 </li>
-<li><p><a href="#Contributions">contributions</a> work with data model 3.0 MagIC contributions</p>
+<li><p><a href="https://pmagpy.github.io/PmagPy_MagIC.html#Contributions">contributions</a> work with data model 3.0 MagIC contributions</p>
 <ul>
-<li><a href="#download_magic">download_magic</a> : unpacks a contribution text file downloaded from the MagIC website</li>
-<li><a href="#upload_magic">upload_magic</a> : prepares a directory with a MagIC contribution for uploading to MagIC</li>
-<li><a href="#cb.add_sites_to_meas_table">cb.add_sites_to_meas_table</a> : completes a measurements data frame with the information required for plotting by site. </li>
-<li><a href="#cb.get_intensity_col">cb.get_intensity_col</a> : finds the first non-zero type of intensity data in a measurements dataframe.</li>
+<li><a href="https://pmagpy.github.io/PmagPy_MagIC.html#download_magic">download_magic</a> : unpacks a contribution text file downloaded from the MagIC website</li>
+<li><a href="https://pmagpy.github.io/PmagPy_MagIC.html#upload_magic">upload_magic</a> : prepares a directory with a MagIC contribution for uploading to MagIC</li>
+<li><a href="https://pmagpy.github.io/PmagPy_MagIC.html#cb.add_sites_to_meas_table">cb.add_sites_to_meas_table</a> : completes a measurements data frame with the information required for plotting by site. </li>
+<li><a href="https://pmagpy.github.io/PmagPy_MagIC.html#cb.get_intensity_col">cb.get_intensity_col</a> : finds the first non-zero type of intensity data in a measurements dataframe.</li>
 </ul>
 </li>
-<li><p><a href="#Conversion-Scripts">conversion scripts</a> : convert many laboratory measurement formats to the MagIC data model 3 format</p>
+<li><p><a href="https://pmagpy.github.io/PmagPy_MagIC.html#Conversion-Scripts">conversion scripts</a> : convert many laboratory measurement formats to the MagIC data model 3 format</p>
 <ul>
-<li><a href="#\_2g\_asc\_magic">_2g_asc_magic</a> : converts 2G ascii files to MagIC</li>
-<li><a href="#\_2g\_bin\_magic">_2g_bin_magic</a> : converts 2G binary files to MagIC</li>
-<li><a href="#aarm_magic">aarm_magic</a> : takes a MagIC formated <em>measurements.txt</em> file with anisotropy of ARM data and calculates the tensors and stores in a MagIC formatted <em>specimens.txt</em> file.</li>
-<li><a href="#atrm_magic">atrm_magic</a> : takes a MagIC formated <em>measurements.txt</em> file with anisotropy of TRM data and calculates the tensors and stores in a MagIC formatted <em>specimens.txt</em> file.</li>
-<li><a href="#agm_magic">agm_magic</a> : converts Princeton Measurements alternating gradient force magnetization (AGM) files to MagIC.</li>
-<li><a href="#bgc_magic">bgc_magic</a> : convert Berkeley Geochronology Center files to MagIC. </li>
-<li><a href="#cit_magic">cit_magic</a> : convert Cal Tech format files to MagIC.</li>
-<li><a href="#generic_magic">generic_magic</a> : converts generic files to MagIC. </li>
-<li><a href="#huji_magic">huji_magic</a> : converts Hebrew University, Jerusalem, Israel files to MagIC.</li>
-<li><a href="#huji_sample_magic">huji_sample_magic</a> : converts HUJI files to a MagIC format. </li>
-<li><a href="#jr6_jr6_magic">jr6_jr6_magic</a> : converts the AGICO JR6 spinner .jr6 files to MagIC </li>
-<li><a href="#jr6_txt_magic">jr6_txt_magic</a> : converts the AGICO JR6 .txt files to MagIC</li>
-<li><a href="#k15_magic">k15_magic</a> : converts 15 measurement anisotropy of magnetic susceptibility files to MagIC.</li>
-<li><a href="#kly4s_magic">kly4s_magic</a> : converts SIO KLY4S formatted files to MagIC.</li>
-<li><a href="#ldeo_magic">ldeo_magic</a> : converts Lamont-Doherty files to MagIC.  </li>
-<li><a href="#livdb_magic">livdb_magic</a> : converts Liverpool files to MagIC.  </li>
-<li><a href="#mst_magic">mst_magic</a> : converts Curie Temperature experimental data to MagIC</li>
-<li><a href="#s_magic">s_magic</a> : converts files with 6 tensor elements (S_j) to MagIC format</li>
-<li><a href="#sio_magic">sio_magic</a> : converts Scripps Institution of Oceanography data files to MagIC </li>
-<li><a href="#sufar4_magic">sufar4_magic</a> : converts AGICO SUFAR program (ver.1.2.) ascii files to MagIC</li>
-<li><a href="#tdt_magic">tdt_magic</a> : converts Thellier Tool files to MagIC</li>
-<li><a href="#utrecht_magic">utrecht_magic</a> : converts Fort Hoofddijk, Utrecht University Robot files to MagIC</li>
-<li><a href="#orientation_magic">orientation_magic</a> : converts an "orient.txt" formatted file with field notebook information into MagIC formatted files</li>
-<li><a href="#azdip_magic">azdip_magic</a> : converts an "azdip" formatted file to a samples.txt file format</li>
+<li><a href="https://pmagpy.github.io/PmagPy_MagIC.html#\_2g\_asc\_magic">_2g_asc_magic</a> : converts 2G ascii files to MagIC</li>
+<li><a href="https://pmagpy.github.io/PmagPy_MagIC.html#\_2g\_bin\_magic">_2g_bin_magic</a> : converts 2G binary files to MagIC</li>
+<li><a href="https://pmagpy.github.io/PmagPy_MagIC.html#agm_magic">agm_magic</a> : converts Princeton Measurements alternating gradient force magnetization (AGM) files to MagIC.</li>
+<li><a href="https://pmagpy.github.io/PmagPy_MagIC.html#bgc_magic">bgc_magic</a> : convert Berkeley Geochronology Center files to MagIC. </li>
+<li><a href="https://pmagpy.github.io/PmagPy_MagIC.html#cit_magic">cit_magic</a> : convert Cal Tech format files to MagIC.</li>
+<li><a href="https://pmagpy.github.io/PmagPy_MagIC.html#generic_magic">generic_magic</a> : converts generic files to MagIC. </li>
+<li><a href="https://pmagpy.github.io/PmagPy_MagIC.html#huji_magic">huji_magic</a> : converts Hebrew University, Jerusalem, Israel files to MagIC.</li>
+<li><a href="https://pmagpy.github.io/PmagPy_MagIC.html#huji_sample_magic">huji_sample_magic</a> : converts HUJI files to a MagIC format. </li>
+<li><a href="https://pmagpy.github.io/PmagPy_MagIC.html#jr6_jr6_magic">jr6_jr6_magic</a> : converts the AGICO JR6 spinner .jr6 files to MagIC </li>
+<li><a href="https://pmagpy.github.io/PmagPy_MagIC.html#jr6_txt_magic">jr6_txt_magic</a> : converts the AGICO JR6 .txt files to MagIC</li>
+<li><a href="https://pmagpy.github.io/PmagPy_MagIC.html#k15_magic">k15_magic</a> : converts 15 measurement anisotropy of magnetic susceptibility files to MagIC.</li>
+<li><a href="https://pmagpy.github.io/PmagPy_MagIC.html#kly4s_magic">kly4s_magic</a> : converts SIO KLY4S formatted files to MagIC.</li>
+<li><a href="https://pmagpy.github.io/PmagPy_MagIC.html#ldeo_magic">ldeo_magic</a> : converts Lamont-Doherty files to MagIC.  </li>
+<li><a href="https://pmagpy.github.io/PmagPy_MagIC.html#livdb_magic">livdb_magic</a> : converts Liverpool files to MagIC.  </li>
+<li><a href="https://pmagpy.github.io/PmagPy_MagIC.html#mst_magic">mst_magic</a> : converts Curie Temperature experimental data to MagIC</li>
+<li><a href="https://pmagpy.github.io/PmagPy_MagIC.html#sio_magic">sio_magic</a> : converts Scripps Institution of Oceanography data files to MagIC </li>
+<li><a href="https://pmagpy.github.io/PmagPy_MagIC.html#sufar4_magic">sufar4_magic</a> : converts AGICO SUFAR program (ver.1.2.) ascii files to MagIC</li>
+<li><a href="https://pmagpy.github.io/PmagPy_MagIC.html#tdt_magic">tdt_magic</a> : converts Thellier Tool files to MagIC</li>
+<li><a href="https://pmagpy.github.io/PmagPy_MagIC.html#utrecht_magic">utrecht_magic</a> : converts Fort Hoofddijk, Utrecht University Robot files to MagIC</li>
+<li><a href="https://pmagpy.github.io/PmagPy_MagIC.html#orientation_magic">orientation_magic</a> : converts an "orient.txt" formatted file with field notebook information into MagIC formatted files</li>
+<li><a href="https://pmagpy.github.io/PmagPy_MagIC.html#azdip_magic">azdip_magic</a> : converts an "azdip" formatted file to a samples.txt file format</li>
 </ul>
 </li>
 </ul>
 </li>
 <li>other handy scripts<ul>
-<li><a href="#chartmaker">chartmaker</a> : script for making chart to guide IZZI lab experiment</li>
+<li><a href="https://pmagpy.github.io/PmagPy_MagIC.html#chartmaker">chartmaker</a> : script for making chart to guide IZZI lab experiment</li>
 </ul>
 </li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Get-started">Get started<a class="anchor-link" href="#Get-started">&#182;</a></h2><p>To use the functions demonstrated in these notebooks, we have to   import the <strong>PmagPy</strong> modules <strong>pmagplotlib</strong>, <strong>pmag</strong> and <strong>ipmag</strong> and some other handy functions.  You can run the following commands in a Python environment where PmagPy is installed (i.e., in the Python interpreter, or in a notebook).</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pmagpy.pmag</span> <span class="k">as</span> <span class="nn">pmag</span>
+<span class="kn">import</span> <span class="nn">pmagpy.pmagplotlib</span> <span class="k">as</span> <span class="nn">pmagplotlib</span>
+<span class="kn">import</span> <span class="nn">pmagpy.ipmag</span> <span class="k">as</span> <span class="nn">ipmag</span>
+<span class="kn">import</span> <span class="nn">pmagpy.contribution_builder</span> <span class="k">as</span> <span class="nn">cb</span>
+<span class="kn">from</span> <span class="nn">pmagpy</span> <span class="k">import</span> <span class="n">convert_2_magic</span> <span class="k">as</span> <span class="n">convert</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span> <span class="c1"># our plotting buddy</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span> <span class="c1"># the fabulous NumPy package</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span> <span class="c1"># and of course Pandas</span>
+<span class="c1"># test if Basemap and/or cartopy is installed</span>
+<span class="n">has_basemap</span><span class="p">,</span> <span class="n">Basemap</span> <span class="o">=</span> <span class="n">pmag</span><span class="o">.</span><span class="n">import_basemap</span><span class="p">()</span>
+<span class="n">has_cartopy</span><span class="p">,</span> <span class="n">Cartopy</span> <span class="o">=</span> <span class="n">pmag</span><span class="o">.</span><span class="n">import_cartopy</span><span class="p">()</span>
+<span class="c1"># test if xlwt is installed (allows you to export to excel)</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="kn">import</span> <span class="nn">xlwt</span>
+    <span class="n">has_xlwt</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+    <span class="n">has_xlwt</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="c1"># This allows you to make matplotlib plots inside the notebook.  </span>
+<span class="o">%</span><span class="k">matplotlib</span> inline 
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="k">import</span> <span class="n">Image</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;All modules imported!&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>All modules imported!
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Now you have everything you need to run PmagPy!</li>
 </ul>
 
 </div>
